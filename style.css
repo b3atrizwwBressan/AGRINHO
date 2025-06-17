@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.game-board {
+width: 80%;
+height: 500px;
+border: 1px solid #333;
+margin: 0 auto;
+position: relative;
+overflow: hidden;
+background-image: url('IMAGEM DE FUNDO 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.VACA {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    right: -100px;
+    animation: VACA-animation 5s infinite linear;
+    z-index: 2;
+}
+
+@keyframes VACA-animation {
+
+    from{
+    right: -100px;
+    }
+    to {
+        right: 100%;
+    }
+} 
+
+.Skin {
+    width: 345px;
+    position: absolute;
+    bottom:  -2;
+    z-index: 2;
+    left: 0;
+
+}
+.jump {
+    animation: jump 1s ease-out;
+}
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+    30% {
+        bottom: 100px;
+    }
+      50% {
+        bottom: 100px;
+        
+    }
+
+      80% {
+        bottom: 50px;
+    }
+      100% {
+        bottom: 0px;
+    }
+}
+
+.COELHO {
+    position: absolute;
+    bottom: 25px;
+    width: 100px;
+    z-index: 1;
+}
+
+.ABELHA {
+    position: absolute;
+    bottom: 70px;
+    width: 100px;
+    z-index: 1;
+    animation: ABELHA-animation 10s infinite linear;
+}
+
+@keyframes ABELHA-animation {
+
+    from{
+    right: -200px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
+.andar {
+    /* Exemplo de animação de andar usando steps para spritesheet */
+    animation: andar 1s steps(4) infinite;
+}
+@keyframes andar {
+    from { background-position-x: 0; }
+    to { background-position-x: -400px; }
+}
+
+.TRIGO {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    z-index: 1;
+   
+}
+
+.CANA {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    z-index: 1;
+   
+}
+
+.COGUMELO {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    z-index: 1;
+}
